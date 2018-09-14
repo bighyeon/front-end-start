@@ -23,6 +23,6 @@ for(var i = 1; i <= 9; i++)
     for(j = 1; j <= 9; j++)
     {
         
-       alert(i + '*' + j + '=' + i*j)
+       console.log(i + '*' + j + '=' + i*j)
     }
 }
