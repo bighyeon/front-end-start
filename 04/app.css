@@ -1,0 +1,16 @@
+.Wrap {
+
+}
+
+
+.wrap .b {
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+}
+
+.wrap .w {
+    width: 50px;
+    height: 50px;
+    background-color: #eee;
+}
