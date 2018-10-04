@@ -1,8 +1,8 @@
 console.log('1boon');
 
 var url= "https://1boon.kakao.com/ch/enter.json?page=1&pagesize=10";
-var b = document.getElementById('b');
-var d = 2;  
+var page = 2;
+  
 getUrlData(url, print);
 
 
@@ -42,10 +42,10 @@ function getUrlData(url, callback){
 
 b.addEventListener('click',function(){
          
-    var url1= url.slice(0,-13)
-    url1 += d + '&pagesize=10';
+    var addEventurl= url.slice(0,-13)
+    addEventurl += page + '&pagesize=10';
     
-    getUrlData(url1,print);
-    d++
+    getUrlData(addEventurl,print);
+    page++
 
  })     
