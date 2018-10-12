@@ -18,18 +18,21 @@
 
 function getdata(){
   var query = document.querySelector('#search-window').value;
+  
   fetch(url+`?query=${query}&page=${page}`, options)
   .then(function(response){
-    response.json().then(function(data){
-    searched(data);
+    response.json().then(function(data){ 
+        searched(data);
     });
-  }) 
+  })
 }
 
 
 submitbutton.addEventListener('click',function(){
   document.getElementById('searched').innerHTML = '';
-  getdata();
+  
+    getdata();
+    
   })
 
 
@@ -38,6 +41,8 @@ submitbutton.addEventListener('click',function(){
 function searched(data){
   
   var str = '';
+  
+  
   for(var i = 0; i < data.documents.length; i++)
   {
     var title = data.documents[i].title;
@@ -58,6 +63,7 @@ function searched(data){
   }
   document.getElementById('searched').innerHTML += str;
   
+
 }
 
 addpage.addEventListener('click',function(){
